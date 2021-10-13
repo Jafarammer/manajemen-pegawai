@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+/* UI Home */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header{
+    background: lightblue;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-bottom: 2px solid #ccc;
+}
+/* Mengatur lebar menu 20% */
+aside{
+    flex: 20%;
+    background: lightblue;
+}
+/* Mengatur lebar konten utama 80% */
+section.main{
+    flex: 80%;
+    background: #fff;
+    min-height: 530px;
+    padding: 15px 20px;
+}
+/* Mengatur footer */
+footer{
+    background: #ccc;
+    color: #555;
+    padding: 20px 20px;
+    text-align: center;
+}
+/* Mengatur layar (responsive */
+@media (max-width: 700px) {
+    .container-home{
+        flex-direction: column;
+    }
+}
+/* Membuang padding tag ul */
+.menu{
+    padding: 0;
+}
+/* Menambah border bawah tag li */
+.menu li {
+    border-bottom: 2px solid #ccc;
+}
+/* Mengatur desain menu tag a */
+.menu a{
+    display: block;
+    padding: 20px;
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.menu a:hover{
+    background: lightcoral;
+}
+/* End UI Home */
