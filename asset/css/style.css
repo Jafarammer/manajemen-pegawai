@@ -84,7 +84,7 @@ footer{
     padding-bottom: 20px;
     margin: 0 0 20px;
 }
-/* Mengatur tsg input dan select memenuhi container */
+/* Mengatur tag input dan select memenuhi container */
 input, select {
     width: 100%;
     padding: 15px 20px;
