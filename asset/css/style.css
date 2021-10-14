@@ -66,11 +66,14 @@ footer{
 }
 /* End UI Home */
 
-/* UI Form and Tabel Pegawai */
+
+
+/* UI Form tambah data and Tabel Pegawai */
 .judul{
     color: #555;
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 /* Mengatur lebar tabel penuh dan antar border tidak memiliki jarak */
 .table{
@@ -91,12 +94,13 @@ footer{
 .tombol{
     display: inline-block;
     max-width: 150px;
-    padding: 15px 30px;
+    padding: 10px 15px;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
     border-radius: 8px;
     transition: 0.2s;
+    background: #C2F784;
 }
 /* Desain tombol edit dan hapus agar lebih kecil */
 .tombol.edit, .tombol.hapus{
@@ -108,13 +112,60 @@ footer{
 .tombol.hapus{
     background: #F92727;
 }
-.tombol.edit{
-    background: #C2F784;
-}
 .tombol.hapus:hover{
     background: #ff0202;
 }
-.tombol.edit:hover{
+.tombol:hover{
     background: #a8f84b;
 }
-/* End UI Form and Tabel Pegawai */
+/* Mengatur form group agar tidak terpengaruh float */
+.form-group{
+    clear: both;
+}
+/* Mengatur lebar label */
+.form-group label{
+    display: block;
+    padding: 15px 0;
+    margin: 8px 0;
+    float: left;
+    width: 30%;
+    font-weight: bold;
+}
+/* Mengatur lebar input agar sejajar dengan label */
+.form-group .input{
+    display: block;
+    width: 50%;
+    /* padding: 15px 0; */
+    float: left;
+}
+/* Mengatur input radio, tombol submit dan tombol reset */
+input[type=radio]{
+    width: 40px;
+    margin-top: 25px;
+}
+.simpan{
+    background: #C2F784;
+    border: none;
+}
+.reset{
+    background: #F92727;
+    border: none;
+}
+.reset:hover{
+    background: #ff0202;
+}
+input, select {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    outline-color: lightblue;
+    border-radius: 10px;
+}
+/* Membuat tampilan form menumpuk pada layar kecil */
+@media (max-width: 700px) {
+    .form-group label, .form-group .input {
+        width: 100%;
+    }
+}
+/* End UI Form tambah data and Tabel Pegawai */

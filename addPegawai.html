@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Add Pegawai</title>
+</head>
+<body>
+    <header>
+        Aplikasi Manajemen Pegawai
+    </header>
+    <div class="container">
+        <aside>
+            <ul class="menu">
+                <li> <a href="Home.html" class="aktif">Dashboard</a> </li>
+                <li> <a href="Pegawai.html">Data Pegawai</a> </li>
+                <li> <a href="Tabel.html">Data Jabatan</a> </li>
+                <li> <a href="Login.html">Keluar</a> </li>
+            </ul>
+        </aside>
+        <section class="main">
+            <h2 class="judul">Tambah Data Pegawai</h2>
+            <form method="post" action="proses.php"></form>
+                <div class="form-group">
+                    <label for="foto">Foto</label>
+                    <div class="input">
+                        <input type="file" id="foto">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <div class="input">
+                        <input type="text" id="nama">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="jk">Jenis Kelamin</label>
+                    <input type="radio" name="jk" id="jk" value="L"> Laki-Laki
+                    <input type="radio" name="jk" id="jk" value="P"> Perempuan
+                </div>
+                <div class="form-group">
+                    <label for="tanggal">Tanggal</label>
+                    <div class="input">
+                        <input type="date" id="tanggal">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="jabatan">Jabatan</label>
+                    <div class="input">
+                        <select id="jabatan">
+                            <option value="ui/ux">UI/UX</option>
+                            <option value="frontend">FrontEnd</option>
+                            <option value="backend">BackEnd</option>
+                            <option value="softwareEnginer">Software Enginer</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Simpan" class="tombol simpan">
+                    <input type="reset" value="Batal" class="tombol reset">
+                </div>
+        </section>
+    </div>
+    <footer>
+        Copyright &copy; Jafarammer
+    </footer>
+
+
+    <script src="asset/js/main.js"></script>
+</body>
+</html>
