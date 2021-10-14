@@ -65,3 +65,56 @@ footer{
     background: lightcoral;
 }
 /* End UI Home */
+
+/* UI Form and Tabel Pegawai */
+.judul{
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+/* Mengatur lebar tabel penuh dan antar border tidak memiliki jarak */
+.table{
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+/* Menambahkan border dan padding pada sel tabel */
+.table th, .table td{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+/* Mengatur background bagian judul tabel */
+.table th{
+    background: #eee;
+}
+/* Mengatur desaain tombol */
+.tombol{
+    display: inline-block;
+    max-width: 150px;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+/* Desain tombol edit dan hapus agar lebih kecil */
+.tombol.edit, .tombol.hapus{
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px;
+}
+.tombol.hapus{
+    background: #F92727;
+}
+.tombol.edit{
+    background: #C2F784;
+}
+.tombol.hapus:hover{
+    background: #ff0202;
+}
+.tombol.edit:hover{
+    background: #a8f84b;
+}
+/* End UI Form and Tabel Pegawai */
