@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Pegawai</title>
+</head>
+<body>
+    <header>
+        Aplikasi Manajemen Pegawai
+    </header>
+    <div class="container">
+        <aside>
+            <ul class="menu">
+                <li> <a href="Home.html" class="aktif">Dashboard</a> </li>
+                <li> <a href="Pegawai.html">Data Pegawai</a> </li>
+                <li> <a href="Tabel.html">Data Jabatan</a> </li>
+                <li> <a href="Login.html">Keluar</a> </li>
+            </ul>
+        </aside>
+        <!-- Pegawai -->
+        <section class="main">
+            <h2 class="judul">Data Pegawai</h2>
+            <a href="addPegawai.html" class="tombol">Tambah</a>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Foto</th>
+                            <th>Nama</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Jabatan</th>
+                            <th>Keterangan</th>
+                            <th>Opsi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td> <img src="asset/img/user.png" alt="user" width="100"> </td>
+                            <td>Jafarammer</td>
+                            <td>L</td>
+                            <td>19 Juni 1996</td>
+                            <td>FrontEnd Enginer ReactJS</td>
+                            <td>Programmer Antusias</td>
+                            <td>
+                                <a href="#" class="tombol edit">Edit</a>
+                                <a href="#" class="tombol hapus">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+        <!-- End Pegawai -->
+    </div>
+    <footer>
+        Copyright &copy; Jafarammer
+    </footer>
+
+
+    <script src="asset/js/main.js"></script>
+</body>
+</html>
