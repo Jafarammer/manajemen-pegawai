@@ -94,7 +94,7 @@ input, select {
     border-radius: 10px;
 }
 /* Mengatur tampilan tombol */
-input[type=submit] {
+.login{
     background-color: lightcoral;
     transition: 0.5s;
     border: none;
@@ -103,7 +103,7 @@ input[type=submit] {
     cursor: pointer;
     font-weight: bold;
 }
-input[type=submit]:hover{
+.login:hover{
     opacity: 0.6;
 }
 .container-login{
@@ -114,3 +114,107 @@ input[type=submit]:hover{
     height: 100vh;
 }
 /* End UI Login */
+
+
+
+/* UI Form tambah data and Tabel Pegawai */
+.judul{
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+/* Mengatur lebar tabel penuh dan antar border tidak memiliki jarak */
+.table{
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+/* Menambahkan border dan padding pada sel tabel */
+.table th, .table td{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+/* Mengatur background bagian judul tabel */
+.table th{
+    background: #eee;
+}
+/* Mengatur desaain tombol */
+.tombol{
+    display: inline-block;
+    max-width: 150px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+    background: #C2F784;
+}
+/* Desain tombol edit dan hapus agar lebih kecil */
+.tombol.edit, .tombol.hapus{
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px;
+}
+.tombol.hapus{
+    background: #F92727;
+}
+.tombol.hapus:hover{
+    background: #ff0202;
+}
+.tombol:hover{
+    background: #a8f84b;
+}
+/* Mengatur form group agar tidak terpengaruh float */
+.form-group{
+    clear: both;
+}
+/* Mengatur lebar label */
+.form-group label{
+    display: block;
+    padding: 15px 0;
+    margin: 8px 0;
+    float: left;
+    width: 30%;
+    font-weight: bold;
+}
+/* Mengatur lebar input agar sejajar dengan label */
+.form-group .input{
+    display: block;
+    width: 50%;
+    /* padding: 15px 0; */
+    float: left;
+}
+/* Mengatur input radio, tombol submit dan tombol reset */
+input[type=radio]{
+    width: 40px;
+    margin-top: 25px;
+}
+.simpan{
+    background: #C2F784;
+    border: none;
+}
+.reset{
+    background: #F92727;
+    border: none;
+}
+.reset:hover{
+    background: #ff0202;
+}
+input, select {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    outline-color: lightblue;
+    border-radius: 10px;
+}
+/* Membuat tampilan form menumpuk pada layar kecil */
+@media (max-width: 700px) {
+    .form-group label, .form-group .input {
+        width: 100%;
+    }
+}
+/* END UI Form tambah data and Tabel Pegawai */

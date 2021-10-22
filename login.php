@@ -12,9 +12,9 @@
         <section class="login-box">
             <h2>Login Aplikasi</h2>
             <form method="POST" action="cek_login.php">
-                <input type="text" placeholder="Username" id="username" autocomplete="off">
-                <input type="password" placeholder="Password" id="password">
-                <input type="submit" value="Login">
+                <input type="text" placeholder="Username" id="username" name="username" autocomplete="off">
+                <input type="password" placeholder="Password" id="password" name="password">
+                <input type="submit" class="login" value="Login">
             </form>
         </section>
     </div>
