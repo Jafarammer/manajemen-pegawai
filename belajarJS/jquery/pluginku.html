@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluginku</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="pluginku.js"></script>
+    <script>
+        $(function() {
+            $('.normal').pluginku();
+            $('.biru').pluginku({
+                warna: 'yellow',
+                background: 'blue'
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="normal">Box Normal</div>
+    <div class="biru">Box Biru</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS</title>
+    <script>
+        let angka = 0;
+        let timer;
+        let timeout;
+
+        function jalankanTimer() {
+            timeout = setTimeout('setTimer()', 3000);
+        }
+        function setTimer() {
+            timer = setInterval('tampilkanAngka()', 100);
+        }
+        function tampilkanAngka() {
+            document.getElementById('timer').innerHTML = angka;
+            angka++;
+        }
+        function hentikanTimer() {
+            clearInterval(timer);
+        }
+        function hentikanTimeout() {
+            clearTimeout(timeout);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="timer">0</h1>
+    <button onclick="jalankanTimer()">Jalankan Timer</button>
+    <button onclick="hentikanTimer()">Hentikan Timer</button>
+    <button onclick="hentikanTimeout()">Hentikan Timout</button>
+    <br>
+    <br>
+    <h1>Belajar Javascript</h1>
+
+    <script>
+        // let a = "Selamat Datang";
+        // function selamat() {
+        //     let b = "Selamat Pagi";
+        //     document.write(a);
+        // }
+        // selamat();
+        // document.write(b);
+
+        let A = 10, B = 4;
+        let C = A % B;
+        document.write(`10 % 4 = ${C} <br>`);
+        A++;
+        document.write(`Nilai A Sekarang ${A} <br>`);
+        let D = A > B;
+        document.write(`11 > 4 Hasilnya ${D} <br>`);
+        let E = false, F = true;
+        let G = E && F;
+        document.write(`false && true hasilnya ${G} <br>`);
+
+        function hitungLuas(p,l) {
+            let L = p * l;
+            return L;
+        }
+        function tampilkanHasil() {
+            let teks = `Luas tanah ${hitungLuas(200, 150)} m2`;
+            document.write(teks);
+        }
+        tampilkanHasil();
+        document.write('<br>');
+        let waktu = new Date();
+        document.write(`Hari ini : ${waktu.getDate()} / ${waktu.getMonth()} / ${waktu.getFullYear()} <br>`);
+         komputer = {
+             os : 'Linux',
+             ram : 'DDR3 8GB',
+             hdd : '1TB',
+             aplikasi : ['MS. Word', 'MS. Excel', 'Adobe Photoshop'],
+             hidup: function() {
+                 let text = 'Komputer telah dihidupkan';
+                 text.toLowerCase();
+                 return text;
+             },
+             monitor : {
+                 merek : 'Samsung',
+                 ukuran : '21 inch',
+                 warna : 'Putih'
+             }
+         }
+         document.write(`${komputer['ram']} RAM <br>`);
+         document.write(`${komputer.hdd} Hardisk <br>`);
+         komputer.ram = 'DDR4 16GB';
+         document.write(`${komputer.ram} RAM <br>`);
+         komputer.merk = 'Lenovo';
+         document.write(`Merk ${komputer.merk} <br>`);
+         delete komputer.os;
+         document.write(`OS ${komputer.os} <br>`);
+         document.write(`Aplikasi Edit foto ${komputer.aplikasi[2]} <br>`);
+         document.write(`${komputer.hidup()} <br>`);
+         document.write(`Merek Monitor ${komputer.monitor.merek} Warna Monitor ${komputer.monitor.warna}`);
+    </script>
+</body>
+</html>

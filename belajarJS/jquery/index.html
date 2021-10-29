@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery.fancybox.min.css">
+    <title>Jquery</title>
+    <script src="jquery.fancybox.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        $('document').ready(function() {
+            $("#foto").click(function(){
+                $(this).fadeOut('slow');
+            });
+        });
+        $(function() {
+            $('.animasi').animate({left: 500}, 'slow');
+            $('.fade, .slide').hide();
+            $('.fade').fadeIn('slow');
+            $('.slide').slideDown('slow');
+            $('.slide').click(function() {
+                $('.toggle').fadeToggle();
+            });
+        });
+        $(function() {
+            $(window).resize(function() {
+                $('h2:first').text('Lebar browser ' +$(this).width());
+                $('h2:last').text('Tinggi browser ' +$(this).height());
+            });
+        });
+        $(function() {
+            $(window).keydown(function() {
+                $('p').text('Tombol keyboard sedang ditekan');
+            }), keyup(function() {
+                $('p').text('Tombol keyboard dilepas');
+            }), keypress(function() {
+                $('div').text('Tombol keyboard ditekan');
+            });
+        });
+        $(function() {
+            $('.gerak').mouseenter(function(){
+                $('#tulis').text('Mouse masuk gambar');
+            }).mouseleave(function(){
+                $('#tulis').text('Mouse keluar gambar');
+            }).mousedown(function() {
+                $('#tulis').text('Mouse ditekan');
+            }).mouseup(function() {
+                $('#tulis').text('Mouse dilepas');
+            });
+        });
+        $(function() {
+            $('input[name="nama"]').focus(function(){
+                $('.input').text('Nama sedang diketik');
+            }).focusout(function() {
+                $('input[name="alamat"]').focus();
+                $('.input').text('Nama sedang tidak focus');
+            });
+        });
+        $(function() {
+            $('.box').css({
+                background: 'red',
+                width : 200,
+                height : 100,
+                padding : 20+'px'
+            });
+            $('.textBox').text('Lebar: ' +$('.box').width() + ' Tinggi: ' +$('.box').height());
+        });
+        $(function() {
+            $('#galeri a').fancybox();
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <h3>Klik Gambar untuk memperbesar</h3>
+        <div id="galeri">
+            <a href="gambar/example/1_s.jpg">
+                <img src="gambar/example/1_s.jpg" width="200">
+            </a>
+            <a href="gambar/example/2_s.jpg">
+                <img src="gambar/example/2_s.jpg" width="200">
+            </a>
+            <a href="gambar/example/3_s.jpg">
+                <img src="gambar/example/3_s.jpg" width="200">
+            </a>
+            <a href="gambar/example/4_s.jpg">
+                <img src="gambar/example/4_s.jpg" width="200">
+            </a>
+        </div>
+    </section>
+    <br>
+    <img id="foto" src="gambar/Vue.png" alt="gambar">
+    <br>
+    <img src="gambar/Vue.png" alt="gambar" width="100" class="animasi">
+    <img src="gambar/Vue.png" alt="gambar" width="100" class="fade">
+    <img src="gambar/Vue.png" alt="gambar" width="100" class="slide">
+    <img src="gambar/Vue.png" alt="gambar" width="100" class="toggle">
+    <br>
+    <h2> </h2>
+    <h2> </h2>
+    <br>
+    <p> </p>
+    <div> </div>
+    <br>
+    <img src="gambar/Vue.png" alt="gambar" width="200" class="gerak">
+    <p id="tulis"></p>
+    <br>
+    <form>
+        <input type="text" name="nama">
+        <input type="text" name="alamat">
+    </form>
+    <b class="input"><b/>
+    <br>
+    <div class="box">BOX</div>
+    <b class="textBox"></b>
+</body>
+</html>
